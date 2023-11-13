@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Coche</title>
+</head>
+
+<body>
+    <h1>Formulario de Coche</h1>
+
+    <form th:action="@{/coches/form}" th:object="${coche}" method="post">
+        <label>Marca: <input type="text" th:field="*{marca}" /></label><br />
+        <label>Modelo: <input type="text" th:field="*{modelo}" /></label><br />
+        <label>Año de Fabricación: <input type="text" th:field="*{anioFabricacion}" /></label><br />
+        <input type="submit" value="Guardar" />
+    </form>
+
+    <a href="/coches/listar">Volver al Listado de Coches</a>
+</body>
+
+</html>
+html>

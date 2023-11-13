@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Listado de Coches</title>
+</head>
+
+<body>
+    <h1>Listado de Coches</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año de Fabricación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="coche : ${coches}">
+                <td th:text="${coche.id}"></td>
+                <td th:text="${coche.marca}"></td>
+                <td th:text="${coche.modelo}"></td>
+                <td th:text="${coche.anioFabricacion}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/coches/form">Agregar Coche</a>
+</body>
+
+</html>
