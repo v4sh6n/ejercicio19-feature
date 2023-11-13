@@ -2,11 +2,15 @@ package com.indra.app.models.entity;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "coches")
+@Entity // mapea automaticamente atributos y campos de la clase
+@Table(name = "coches") // nomenclatura tablas en miniusculas y terminan el plural asi se diferencia de la clase
 public class Coche {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	//atributos 
+	
+	// anotaciones específicas JPA para definir y gestionar PK
+    @Id //marca como PK 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//especifica estrategia para generar valores para PK
     private Long id;
 
     private String marca;
@@ -14,6 +18,7 @@ public class Coche {
     private int anioFabricacion;
 
     // Getters y Setters
+    //para acceder y modificar los atributos
 
     public Long getId() {
         return id;
@@ -47,3 +52,15 @@ public class Coche {
         this.anioFabricacion = anioFabricacion;
     }
 }
+/*
+ * 
+ *  
+ *	La clase Coche es una entidad JPA mapeada a una tabla llamada "coches".
+ * 	La anotación @Entity indica que la clase es una entidad JPA.
+ *	La anotación @Table especifica el nombre de la tabla en la base de datos.
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
