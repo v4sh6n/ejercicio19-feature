@@ -7,6 +7,7 @@ import com.indra.app.models.dao.CocheRepository;
 import com.indra.app.models.entity.Coche;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CocheService {
@@ -17,7 +18,15 @@ public class CocheService {
         return cocheRepository.findAll();
     }
 
+    public Optional<Coche> obtenerCochePorId(Long id) {
+        return cocheRepository.findById(id);
+    }
+
     public void guardarCoche(Coche coche) {
         cocheRepository.save(coche);
+    }
+
+    public void eliminarCoche(Long id) {
+        cocheRepository.deleteById(id);
     }
 }
