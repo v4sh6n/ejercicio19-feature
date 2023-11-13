@@ -16,28 +16,30 @@
         <strong>Error:</strong> ${error}
     </div>
 
-    <h1 th:text="${titulo}"></h1>
+    <div class="container mt-3">
+        <h1 th:text="${titulo}"></h1>
 
-    <form th:action="@{/coches/form}" method="post" th:object="${coche}">
-        <!-- Campos del formulario -->
-        <div class="mb-3">
-            <label for="marca" class="form-label">Marca</label>
-            <input type="text" class="form-control" id="marca" th:field="*{marca}" required>
-        </div>
-        <div class="mb-3">
-            <label for="modelo" class="form-label">Modelo</label>
-            <input type="text" class="form-control" id="modelo" th:field="*{modelo}" required>
-        </div>
-        <div class="mb-3">
-            <label for="anioFabricacion" class="form-label">Año de Fabricación</label>
-            <input type="number" class="form-control" id="anioFabricacion" th:field="*{anioFabricacion}" required>
-        </div>
-        <!-- Campo oculto para el ID -->
-        <input type="hidden" th:field="*{id}" />
-        <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
-
+        <form th:action="@{/coches/form}" method="post" th:object="${coche}">
+            <!-- Campos del formulario -->
+            <div class="mb-3">
+                <label for="marca" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="marca" th:field="*{marca}" required>
+            </div>
+            <div class="mb-3">
+                <label for="modelo" class="form-label">Modelo</label>
+                <input type="text" class="form-control" id="modelo" th:field="*{modelo}" required>
+            </div>
+            <div class="mb-3">
+                <label for="anioFabricacion" class="form-label">Año de Fabricación</label>
+                <input type="number" class="form-control" id="anioFabricacion" th:field="*{anioFabricacion}" required>
+            </div>
+            <!-- Campo oculto para el ID -->
+            <input type="hidden" th:field="*{id}" />
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
 </body>
 
 </html>
+
 

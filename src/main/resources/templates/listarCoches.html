@@ -16,36 +16,39 @@
         <strong>Error:</strong> ${error}
     </div>
 
-    <h1>Listado de Coches</h1>
+    <div class="container mt-3">
+        <h1>Listado de Coches</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Año de Fabricación</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Iterar sobre la lista de coches y mostrar información -->
-            <tr th:each="coche : ${coches}">
-                <td th:text="${coche.id}"></td>
-                <td th:text="${coche.marca}"></td>
-                <td th:text="${coche.modelo}"></td>
-                <td th:text="${coche.anioFabricacion}"></td>
-                <td>
-                    <!-- Enlaces para editar y eliminar -->
-                    <a th:href="@{'/coches/form?id=' + ${coche.id}}">Editar</a>
-                    |
-                    <a th:href="@{'/coches/eliminar/' + ${coche.id}}">Eliminar</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <a th:href="@{/coches/form}" class="btn btn-primary mb-3">Añadir Nuevo Coche</a>
 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año de Fabricación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterar sobre la lista de coches y mostrar información -->
+                <tr th:each="coche : ${coches}">
+                    <td th:text="${coche.id}"></td>
+                    <td th:text="${coche.marca}"></td>
+                    <td th:text="${coche.modelo}"></td>
+                    <td th:text="${coche.anioFabricacion}"></td>
+                    <td>
+                        <!-- Enlaces para editar y eliminar -->
+                        <a th:href="@{'/coches/form?id=' + ${coche.id}}" class="btn btn-info btn-sm">Editar</a>
+                        <a th:href="@{'/coches/eliminar/' + ${coche.id}}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
+
 
