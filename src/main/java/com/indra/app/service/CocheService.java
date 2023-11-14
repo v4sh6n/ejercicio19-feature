@@ -31,6 +31,9 @@ public class CocheService {
     }
 }
 /*
+ * Capa de Servicio (Service):
+ *  capa de servicio contiene la lógica de negocio de la aplicación
+ *  Los servicios se encargan de realizar operaciones específicas relacionadas con los coches, 
  * La clase CocheService es un componente de servicio con la anotación @Service.
  * Utiliza la inyección de dependencias para acceder a un CocheRepository.
  * Proporciona métodos para operaciones lógicas relacionadas con coches

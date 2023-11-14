@@ -13,6 +13,9 @@ public interface CocheRepository extends JpaRepository<Coche, Long> {
 
 
 /*
+ * Capa de Acceso a Datos (DAO/Repository):
+ * En esta capa, gestionamos el acceso a la base de datos. 
+ * Se ha utilizado Spring Data JPA, que simplifica enormemente la implementación de las operaciones de acceso a datos
  * "Data Access Object" DAO
  * Clase de persistencia que se encarga de acceder a los datos
  * 

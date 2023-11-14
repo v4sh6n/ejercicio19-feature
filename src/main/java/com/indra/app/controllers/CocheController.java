@@ -14,7 +14,7 @@ import java.util.Optional;
 @RequestMapping({"/","/coches","/index"}) //para específicar varias rutas a parte de root /
 public class CocheController {
     @Autowired //realiza la inyeccion de dependencias, añade al contexto de Spring
-    private CocheService cocheService;
+    private CocheService cocheService; //uso de la clase service
     
 
     // Método para listar todos los coches
@@ -62,7 +62,10 @@ public class CocheController {
         return "redirect:/coches/listar";
     }
 }
-
+/*
+ * Capa de Presentación (Controller)
+ * En esta capa, manejamos la interacción con el usuario
+ */
 
 
 //    @GetMapping("/eliminar/{id}")

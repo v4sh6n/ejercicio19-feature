@@ -53,7 +53,10 @@ public class Coche {
     }
 }
 /*
- * 
+ * Capa de Persistencia (Entity):
+ * La capa de persistencia contiene las entidades que representan los objetos de nuestra aplicación.
+ * En este caso, la entidad es Coche (en el paquete com.indra.app.models.entity). 
+ * Las entidades se mapean a tablas en la base de datos y contienen los atributos y relaciones que queremos persistir.
  *  
  *	La clase Coche es una entidad JPA mapeada a una tabla llamada "coches".
  * 	La anotación @Entity indica que la clase es una entidad JPA.
